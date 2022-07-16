@@ -1,4 +1,4 @@
-import './NavBar.css';
+import '../css/NavBar.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logocb from '../logocb.png';

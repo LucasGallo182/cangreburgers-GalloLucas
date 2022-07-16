@@ -1,0 +1,12 @@
+/* ItemListContainer */
+.parrafoEjemplo {
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(230, 143, 30);
+    color: brown;
+}
