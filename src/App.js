@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer textoSalida={greetingMsj} />
+      <p className='Compraste'></p>
     </div>
   );
 }
