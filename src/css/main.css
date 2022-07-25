@@ -1,12 +1,21 @@
 /* ItemListContainer */
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
 .parrafoEjemplo {
-    border: 3px solid black;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px 0px;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: bold;
-    background-color: rgb(230, 143, 30);
     color: brown;
+    padding-left: 17%;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.divBody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }

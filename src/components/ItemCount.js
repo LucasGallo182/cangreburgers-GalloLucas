@@ -1,5 +1,5 @@
 import '../css/ItemCount.css'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export const ItemCount = ({ initial, stock, onAdd }) => {
     const [contador, setContador] = useState(parseInt(initial));
@@ -11,10 +11,6 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
     const suma = () => {
         setContador(contador + 1);
     }
-
-    useEffect(() => {
-        setContador(parseInt(initial));
-    }, [initial])
 
     return (
         <div className='contador'>

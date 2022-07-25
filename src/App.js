@@ -4,11 +4,13 @@ import ItemListContainer from './components/ItemListContainer';
 
 
 function App() {
-  const greetingMsj = 'Greetings';
+  const greetingMsj = 'BIENVENIDO';
   return (
     <div className="App">
       <NavBar />
+      <div className='bodyColor'>
       <ItemListContainer textoSalida={greetingMsj} />
+      </div>
     </div>
   );
 }

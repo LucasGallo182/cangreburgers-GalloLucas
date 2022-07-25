@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+.cardProducto {
+    padding-bottom: 217px;
+}
+
+.titleProducto {
+    font-size: 18px;
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: brown;
+    padding-bottom: 30px; 
+}
+
+.cardCSS {
+    opacity: 0.9;
+    width: 25rem;
+    -webkit-box-shadow: 22px 21px 24px 8px rgba(102,102,102,0.59);
+    -moz-box-shadow: 22px 21px 24px 8px rgba(102,102,102,0.59);
+    box-shadow: 22px 21px 24px 8px rgba(102,102,102,0.59);
+}
+
+.cardCSS:hover {
+    opacity: 1;
+}
+
+.bgColor {
+    background-color: #f5ebd2;
+}
