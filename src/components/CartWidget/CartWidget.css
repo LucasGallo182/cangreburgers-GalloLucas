@@ -1,0 +1,17 @@
+/* Cart Icon CSS */
+.cartIcon {
+    padding-bottom: 12px;
+    display: flex;
+}
+
+.cartIcon img {
+    width: 52px;
+}
+
+.cartIcon span {
+    position: relative;
+    top: 15px;
+    right: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}

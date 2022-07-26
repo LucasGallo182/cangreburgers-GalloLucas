@@ -9,13 +9,15 @@
     font-size: 32px;
     font-weight: bold;
     color: brown;
-    padding-left: 17%;
+    padding-left: 6.5%;
     font-family: 'Mochiy Pop One', sans-serif;
 }
 
 .divBody {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    padding: 0px 20px;
+    gap: 10px;
 }

@@ -1,11 +1,11 @@
-import '../css/Item.css'
+import './Item.css'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
 const Item = ({burger}) => {
     return (
         <div className='cardProducto'>
-            <Card className='border-1 border-dark m-2 cardCSS'>
+            <Card className='border-0 border-dark m-1 cardCSS spin circle'>
             <Card.Img className='bgColor' variant='top' src={burger.imagen} alt='producto' />
             <Card.Body className='bgColor'>
                 <Card.Title className='titleProducto'>{burger.titulo}</Card.Title>

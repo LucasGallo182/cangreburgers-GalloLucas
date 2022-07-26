@@ -1,5 +1,5 @@
-import '../css/NavBar.css';
-import cartIcono from '../carts.png';
+import './CartWidget.css';
+import cartIcono from '../../carts.png';
 
 function CartWidget() {
     return (

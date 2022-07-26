@@ -1,8 +1,8 @@
-import '../css/NavBar.css';
+import './NavBar.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import logocb from '../logocb.png';
-import CartWidget from './CartWidget';
+import logocb from '../../logocb.png';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar() {
     const ItemsMenu = [

@@ -1,10 +1,10 @@
-import '../css/main.css'
-import ItemCount from '../components/ItemCount'
-import ItemList from './ItemList'
+import './ItemListContainer.css'
+import ItemCount from '../ItemCount/ItemCount'
+import ItemList from '../ItemList/ItemList'
 import { useState, useEffect } from 'react';
 
 const productos = [
-    { id: 1, titulo: 'Doble Napolitana Tasty XL', imagen: 'https://i.ibb.co/GsDN2RV/Doble-Napolitano-XL-1.png' },
+    { id: 1, titulo: 'Doble Napolitana XL', imagen: 'https://i.ibb.co/GsDN2RV/Doble-Napolitano-XL-1.png' },
     { id: 2, titulo: 'Cheese Burger Clásica', imagen: 'https://i.ibb.co/d42dJ0r/hamburguesa-clasica.png' },
     { id: 3, titulo: 'Cuarto XL Simple', imagen: 'https://i.ibb.co/FVQtygC/MENU-Cuarto-XL-Simple.png' },
     { id: 4, titulo: 'Triple Bacon & Cheddar', imagen: 'https://i.ibb.co/ZKBPKst/Stacker-Triple.png' }
