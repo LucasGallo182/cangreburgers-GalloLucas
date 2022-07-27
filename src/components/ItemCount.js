@@ -1,4 +1,4 @@
-import './ItemCount.css'
+import '../style.css';
 import { useState } from 'react';
 
 export const ItemCount = ({ initial, stock, onAdd }) => {
@@ -19,7 +19,7 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
                 <span>{contador}</span>
                 <button disabled={contador >= stock} onClick={suma}>+</button>
             </div>
-            <div class='botonAbajo'>
+            <div className='botonAbajo'>
                 <button disabled={stock <= 0} onClick={() => onAdd(contador)}>Agregar al carrito</button>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import Item from '../Item/Item'
+import Item from './Item'
 
 const ItemList = ( { datos = []} ) => {
     return (

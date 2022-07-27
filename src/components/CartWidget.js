@@ -1,11 +1,10 @@
-import './CartWidget.css';
-import cartIcono from '../../carts.png';
+import '../style.css';
 
 function CartWidget() {
     return (
         <>
             <div className='cartIcon'>
-                <img src={cartIcono} alt="carrito" />
+                <img src='./img/carts.png' alt="carrito" />
                 <span>2</span>
             </div>
         </>

@@ -1,6 +1,6 @@
-import './ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount'
-import ItemList from '../ItemList/ItemList'
+import '../style.css';
+import ItemCount from '../components/ItemCount'
+import ItemList from '../components/ItemList'
 import { useState, useEffect } from 'react';
 
 const productos = [
