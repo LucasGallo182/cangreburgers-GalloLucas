@@ -1,5 +1,4 @@
 import '../style.css';
-import ItemCount from '../components/ItemCount'
 import ItemList from '../components/ItemList'
 import { useState, useEffect } from 'react';
 
@@ -22,14 +21,9 @@ export const ItemListContainer = (props) => {
         getDatos.then(res => setDatos(res))
     }, [])
 
-    const onAdd = (cantidad) => {
-        console.log(`Has comprado ${cantidad} unidades`);
-    }
-
     return (
         <>
             <p className="parrafoEjemplo">{props.textoSalida}</p>
-            <ItemCount initial={1} stock={6} onAdd={onAdd} />
             <div className='divBody'>
                 <ItemList datos={datos} />
             </div>

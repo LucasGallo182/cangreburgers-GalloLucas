@@ -1,8 +1,11 @@
 import '../style.css'
-import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
+import ItemCount from './ItemCount';
 
 export const ItemDetail = ({ data }) => {
+    const onAdd = (cantidad) => {
+        console.log(`Has comprado ${cantidad} unidades`);
+    }
     return (
         <div className='cardDescription'>
             <Card className='paddingStyle border-0'>
@@ -13,7 +16,7 @@ export const ItemDetail = ({ data }) => {
                     <p>{data.descripcion}</p>
                     <p className='precioText'>${data.precio}</p>
                     </Card.Text>
-                    <Button variant="warning">Comprar</Button>
+                    <ItemCount initial={1} stock={6} onAdd={onAdd} />
                 </Card.Body>
             </Card>
         </div> 
