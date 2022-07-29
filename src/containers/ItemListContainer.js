@@ -1,33 +1,37 @@
-import '../style.css';
+import '../style.css'
 import ItemList from '../components/ItemList'
-import { useState, useEffect } from 'react';
-
-const productos = [
-    { id: 1, titulo: 'Doble Napolitana XL', imagen: 'https://i.ibb.co/GsDN2RV/Doble-Napolitano-XL-1.png' },
-    { id: 2, titulo: 'Cheese Burger Clásica', imagen: 'https://i.ibb.co/d42dJ0r/hamburguesa-clasica.png' },
-    { id: 3, titulo: 'Cuarto XL Simple', imagen: 'https://i.ibb.co/FVQtygC/MENU-Cuarto-XL-Simple.png' },
-    { id: 4, titulo: 'Triple Bacon & Cheddar', imagen: 'https://i.ibb.co/ZKBPKst/Stacker-Triple.png' }
-]
+import { useState, useEffect } from 'react'
+import Spinner from 'react-bootstrap/Spinner'
+import { useParams } from 'react-router-dom'
+import productos from '../mock/array'
 
 export const ItemListContainer = (props) => {
     const [datos, setDatos] = useState([])
+    const [loading, setLoading] = useState(true)
+    const { categoryId } = useParams()
 
     useEffect(() => {
-        const getDatos = new Promise(resolve => {
+        const getData = new Promise (resolve => {
             setTimeout(() => {
                 resolve(productos)
-            }, 3000)
+            }, 2000)
         })
-        getDatos.then(res => setDatos(res))
-    }, [])
+        if(categoryId){
+            getData.then(res => setDatos (res.filter(prod => prod.category === categoryId)))
+            setLoading(false)
+        } else {
+            getData.then(res => setDatos(res))
+            setLoading(false)
+        }
+    }, [categoryId])
 
     return (
-        <>
+        <div className='divBody1'>
             <p className="parrafoEjemplo">{props.textoSalida}</p>
             <div className='divBody'>
-                <ItemList datos={datos} />
+                {loading ? <Spinner animation="border" variant="warning" /> : <ItemList datos={datos} />}
             </div>
-        </>
+        </div>
     )
 }
 

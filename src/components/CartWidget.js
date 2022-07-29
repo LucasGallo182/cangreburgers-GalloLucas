@@ -1,11 +1,14 @@
-import '../style.css';
+import '../style.css'
+import { Link } from "react-router-dom"
 
 function CartWidget() {
     return (
         <>
             <div className='cartIcon'>
-                <img src='./img/carts.png' alt="carrito" />
-                <span>2</span>
+                <Link to='cart'>
+                    <img src='./img/carts.png' alt="carrito" />
+                </Link>
+                <span className='valueCart'>2</span>
             </div>
         </>
     )

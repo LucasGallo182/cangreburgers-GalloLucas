@@ -1,32 +1,26 @@
-/* AppCSS */
-.App {
-    text-align: center;
-}
-
-.bodyColor {
-    background-color: #f5ebd2;
-}
-
 /* CartWidget */
 .cartIcon {
-    padding-bottom: 12px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cartIcon img {
     width: 52px;
 }
 
-.cartIcon span {
-    position: relative;
-    top: 15px;
-    right: 25px;
-    font-size: 18px;
+.valueCart {
+    margin-top: 5px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 /* Item */
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+.cardProducto {
+    height: 325px;
+}
 
 .titleProducto {
     font-size: 18px;
@@ -34,9 +28,15 @@
     color: brown;
 }
 
+.subTitleProducto {
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
 .cardCSS {
     opacity: 0.9;
     width: 20rem;
+    height: 25rem;
     -webkit-box-shadow: 22px 21px 24px 8px rgba(102, 102, 102, 0.59);
     -moz-box-shadow: 22px 21px 24px 8px rgba(102, 102, 102, 0.59);
     box-shadow: 22px 21px 24px 8px rgba(102, 102, 102, 0.59);
@@ -47,7 +47,7 @@
 }
 
 .bgColor {
-    background-color: #f5ebd2;
+    background-color: #dbbc6d;
 }
 
 /* ItemCount */
@@ -63,7 +63,7 @@
 .contador .seccionArriba {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 20px;
     padding: 5px 0px;
 }
 
@@ -74,47 +74,14 @@
     font-weight: bold;
 }
 
-.contador .seccionArriba button {
-    border: 0;
-    background-color: #ffc107;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: white;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-}
-
-.contador .seccionArriba button:disabled {
-    background-color: #bb9f6b;
-}
-
 .contador .botonAbajo {
     display: flex;
     justify-content: center;
 }
 
-.contador .botonAbajo button {
-    border: 0;
-    background-color: #ffc107;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    color: white;
-    padding: 5px;
-}
-
-.contador .botonAbajo button:disabled {
-    background-color: #bb9f6b;
-}
-
 /* ItemDetail */
 .cardDescription {
-    background-color: #f5ebd2;
+    background-color: #cda540;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,50 +92,66 @@
     width: 50rem;
 }
 
-.paddingStyle span {
-    font-size: 18px;
+.detailTitle span {
+    font-size: 42px;
+    color: brown;
+    text-align: center;
     font-family: 'Mochiy Pop One', sans-serif;
-    color: brown;
 }
 
-.paddingStyle p {
-    font-size: 16px;
-    color: brown;
-}
-
-.paddingStyle .precioText {
+.detailSubTitle {
     font-size: 20px;
     color: brown;
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    padding-top: 20px;
+}
+
+.detailDescription {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+
+.detailPrecio {
+    font-size: 32px;
+    text-align: center;
     font-weight: bold;
 }
 
 .bgBodyCard {
-    background-color: #f5ebd2;
+    background-color: #cda540;
 }
 
-/* ItemListContainer */
+.bgDetalle {
+    background-color: #cda540;
+}
+
 /* ItemListContainer */
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 
 .parrafoEjemplo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     padding: 10px 0px;
     font-size: 32px;
     font-weight: bold;
     color: brown;
-    padding-left: 6%;
     font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.divBody1 {
+    background-color: #cda540;
+    text-align: center;
 }
 
 .divBody {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
     justify-content: center;
-    align-items: center;
     padding: 0px 100px;
+    background-color: #cda540;
+    height: 150vh;
 }
 
 /* NavBar */
@@ -182,9 +165,10 @@
 .linkMenu {
     text-decoration: none;
     color: rgb(96, 22, 22);
-    padding: 7px;
+    padding: 16px 15px;
     font-size: 16px;
     font-weight: 500;
+    display: flex;
 }
 
 .linkMenu:hover {
@@ -193,10 +177,55 @@
     border-radius: 20px;
 }
 
+.dropDownMenu {
+    text-decoration: none;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkDrop {
+    text-decoration: none;
+    color: rgb(96, 22, 22);
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    padding-left: 15px;
+}
+
+.linkDrop:hover {
+    text-decoration: none;
+    color: rgb(96, 22, 22);
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    padding-left: 15px;
+    background-color: rgb(226, 223, 223);
+}
+
 /* Left Menu */
 .spanBranding {
     font-weight: bold;
     font-family: 'Pacifico', cursive;
     font-size: 26px;
     color: rgb(96, 22, 22);
+}
+
+/* Cart */
+.bgCart {
+    background-color: #cda540;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bgCart p {
+    margin: 70px 0px;
+    font-size: 26px;
+    color: rgb(96, 22, 22);
+    font-family: 'Mochiy Pop One', sans-serif;
 }

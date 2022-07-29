@@ -1,19 +1,23 @@
-import './style.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './containers/ItemListContainer';
-import ItemDetailContainer from './containers/ItemDetailContainer';
+import './style.css'
+import NavBar from './components/NavBar'
+import ItemListContainer from './containers/ItemListContainer'
+import ItemDetailContainer from './containers/ItemDetailContainer'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Cart from './components/Cart'
 
 
 function App() {
-  const greetingMsj = 'BIENVENIDO';
+  const greetingMsj = '¡Elegí tu hamburguesa preferida!';
   return (
-    <div className="App">
+    <BrowserRouter>
       <NavBar />
-      <div className='bodyColor'>
-        <ItemListContainer textoSalida={greetingMsj} />
-      </div>
-      <ItemDetailContainer />
-    </div>
+      <Routes>
+        <Route path='/' element={ <ItemListContainer textoSalida={greetingMsj}/> } />
+        <Route path='/categorias/:categoryId' element={ <ItemListContainer /> } />
+        <Route path='/cart' element={ <Cart /> } />
+        <Route path='/item/:itemId' element={ <ItemDetailContainer /> } />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

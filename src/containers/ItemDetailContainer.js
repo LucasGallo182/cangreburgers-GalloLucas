@@ -1,23 +1,26 @@
 import ItemDetail from '../components/ItemDetail'
 import { useState, useEffect } from 'react'
-
-const producto = { id: 1, titulo: 'Doble Napolitana XL', imagen: 'https://i.ibb.co/GsDN2RV/Doble-Napolitano-XL-1.png', precio: 3000, descripcion: 'La combinación de siempre, ahora duplicada: 2 carnes a la parrilla + jamón y queso + tomate + mayonesa.' }
+import '../style.css'
+import { useParams } from 'react-router-dom'
+import productos from '../mock/array'
 
 export const ItemDetailContainer = () => {
-    const [data, setData] = useState({})
+    const [datos, setDatos] = useState([])
+    const { itemId } = useParams()
 
     useEffect(() => {
         const getData = new Promise(resolve => {
-            setTimeout (() => {
-                resolve(producto)
+            setTimeout(() => {
+                resolve(productos)
             }, 2000)
         })
-
-        getData.then(res => setData(res))
-    }, [])
+        getData.then(res => setDatos(res.find(prod => prod.id === parseInt(itemId))))
+    }, [itemId])
 
     return (
-        <ItemDetail data={data} />
+        <div className='bgDetalle'>
+            <ItemDetail datos={datos} />
+        </div>
     )
 }
 
