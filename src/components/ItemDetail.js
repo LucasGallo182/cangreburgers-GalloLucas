@@ -1,11 +1,18 @@
 import '../style.css'
 import Card from 'react-bootstrap/Card'
 import ItemCount from './ItemCount'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const ItemDetail = ({ datos }) => {
+    const navigate = useNavigate()
+    const [count, setCount] = useState(0)
     const { title, subtitle, description, image, precio, stock } = datos
-    const onAdd = (cantidad) => {
-        console.log(`Has comprado ${cantidad} unidades`);
+    const onAdd = (quantityToAdd) => {
+        console.log(`Has comprado ${quantityToAdd} unidades`)
+        setCount(quantityToAdd)
+        console.log(count)
+        navigate('../../Cart')
     }
     return (
         <div className='cardDescription'>

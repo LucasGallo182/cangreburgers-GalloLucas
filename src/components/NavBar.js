@@ -12,13 +12,13 @@ function NavBar() {
             <Navbar expand="lg" className='navBarStyle'>
                 <Container>
                     <Navbar.Brand href="../" className='d-flex align-items-center'>
-                        <img alt="logo" src='./img/logocb.png' width="60" height="60" />
+                        <img alt="logo" src='https://i.ibb.co/y8GTw7S/logocb.png' width="60" height="60" />
                         <span className='spanBranding'>CangreBurgers</span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto pt-2">
-                            <NavDropdown title="Categorias" id="basic-nav-dropdown" className='linkMenu dropDownMenu'>
+                            <NavDropdown title={<span className='linkMenu text-danger'>Categorías</span>} id="basic-nav-dropdown" className='catLink'>
                                 <NavLink className='linkDrop text-danger' to='/categorias/hamburguesas' key='hamburguesas'>Hamburguesas</NavLink>
                                 <NavLink className='linkDrop text-danger' to='/categorias/pollo' key='pollo'>Pollo</NavLink>
                                 <NavLink className='linkDrop text-danger' to='/categorias/guarnicion' key='guarnicion'>Guarniciones</NavLink>

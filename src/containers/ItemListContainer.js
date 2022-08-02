@@ -7,21 +7,21 @@ import productos from '../mock/array'
 
 export const ItemListContainer = (props) => {
     const [datos, setDatos] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const { categoryId } = useParams()
 
     useEffect(() => {
         const getData = new Promise (resolve => {
+            setLoading(true)
             setTimeout(() => {
                 resolve(productos)
-            }, 2000)
+            }, 3000)
         })
+        .finally(() => setLoading(false))
         if(categoryId){
             getData.then(res => setDatos (res.filter(prod => prod.category === categoryId)))
-            setLoading(false)
         } else {
             getData.then(res => setDatos(res))
-            setLoading(false)
         }
     }, [categoryId])
 
@@ -29,7 +29,7 @@ export const ItemListContainer = (props) => {
         <div className='divBody1'>
             <p className="parrafoEjemplo">{props.textoSalida}</p>
             <div className='divBody'>
-                {loading ? <Spinner animation="border" variant="warning" /> : <ItemList datos={datos} />}
+                {loading ? <Spinner animation="border" variant="danger" /> : <ItemList datos={datos} />}
             </div>
         </div>
     )

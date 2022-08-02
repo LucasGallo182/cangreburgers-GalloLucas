@@ -34,7 +34,7 @@
 }
 
 .cardCSS {
-    opacity: 0.9;
+    transition: transform 1s;
     width: 20rem;
     height: 25rem;
     -webkit-box-shadow: 22px 21px 24px 8px rgba(102, 102, 102, 0.59);
@@ -43,12 +43,91 @@
 }
 
 .cardCSS:hover {
-    opacity: 1;
+    transform: scale(1.1);
 }
 
 .bgColor {
     background-color: #dbbc6d;
 }
+
+/* Item>Button */
+.linkButton {
+    text-decoration: none;
+}
+
+.cssbuttons-io-button {
+    background: #ffc107;
+    color: brown;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: inset 0 0 1.6em -0.6em #e3c773;
+    box-shadow: inset 0 0 1.6em -0.6em #e3c773;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+}
+
+.cssbuttons-io-button .icon {
+    background: #e5d9b5;
+    margin-left: 1em;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    -webkit-box-shadow: 0.1em 0.1em 0.6em 0.2em #e3c773;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #e3c773;
+    right: 0.3em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    color: brown
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    -webkit-transform: translateX(0.1em);
+    -ms-transform: translateX(0.1em);
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
 
 /* ItemCount */
 .contador {
@@ -126,6 +205,8 @@
 
 .bgDetalle {
     background-color: #cda540;
+    display: flex;
+    justify-content: center;
 }
 
 /* ItemListContainer */
@@ -168,7 +249,6 @@
     padding: 16px 15px;
     font-size: 16px;
     font-weight: 500;
-    display: flex;
 }
 
 .linkMenu:hover {
@@ -177,14 +257,8 @@
     border-radius: 20px;
 }
 
-.dropDownMenu {
-    text-decoration: none;
-    padding: 7px;
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.catLink {
+    margin-top: 7px;
 }
 
 .linkDrop {
@@ -228,4 +302,25 @@
     font-size: 26px;
     color: rgb(96, 22, 22);
     font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.bgCart img {
+    width: 480;
+    height: 354;
+}
+
+/* MEDIAQUERY */
+@media screen and (max-width: 1024px) {
+    .divBody {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px 40px;
+        justify-content: center;
+        background-color: #cda540;
+        align-content: flex-start;
+    }
+
+    .divBody1 {
+        min-height: 300vh;
+    }
 }

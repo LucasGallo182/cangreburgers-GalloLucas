@@ -6,7 +6,7 @@ function CartWidget() {
         <>
             <div className='cartIcon'>
                 <Link to='cart'>
-                    <img src='./img/carts.png' alt="carrito" />
+                    <img src='https://i.ibb.co/MDksF29/carts.png' alt="carrito" />
                 </Link>
                 <span className='valueCart'>2</span>
             </div>
