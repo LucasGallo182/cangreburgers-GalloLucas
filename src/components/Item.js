@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Item = ({ producto }) => {
     const { title, image, subtitle, id } = producto
+
     return (
         <div className='cardProducto'>
             <Card className='border-0 border-dark cardCSS'>

@@ -3,13 +3,16 @@ import Card from 'react-bootstrap/Card'
 import ItemCount from './ItemCount'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../context/CartContext'
 
 export const ItemDetail = ({ datos }) => {
     const [goCart, setGoCart] = useState(false)
-    const { title, subtitle, description, image, precio, stock } = datos
+    const {addItem} = useCartContext()
 
-    const onAdd = (quantityToAdd) => {
+    const { title, subtitle, description, image, precio, stock } = datos
+    const onAdd = (quantity) => {
         setGoCart(true)
+        addItem(datos, quantity)
     }
 
     return (
@@ -23,7 +26,7 @@ export const ItemDetail = ({ datos }) => {
                     <Card.Text className='detailPrecio'>${precio}</Card.Text>
                     {
                         goCart
-                            ? <Link to='../Cart'>
+                            ? <Link to='../Cart' className='btnTerminarCompra'>
                                 <button className="cssbuttons-io-button"> Terminar compra
                                     <div className="icon">
                                         <svg className="shopping_cart" id="Layer_1" enableBackground="new 0 0 511.728 511.728" viewBox="0 0 511.728 511.728" xmlns="http://www.w3.org/2000/svg">
