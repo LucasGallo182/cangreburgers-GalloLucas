@@ -25,21 +25,27 @@ const CartProvider = ({ children }) => {
             producto.quantity += quantity
             newCart = [...cart]
         } else {
-            producto = {...item, quantity: quantity}
+            producto = { ...item, quantity: quantity }
             newCart = [...cart, producto]
         }
         setCart(newCart)
     }
 
+    /* Suma Total del carrito */
+    const totalPay = () => cart.reduce((acc, currentP) => acc + currentP.quantity * currentP.precio, 0)
+
+    /* Cant total de productos */
+    const totalItems = () => cart.reduce((acc, ActualProd) => acc + ActualProd.quantity, 0)
+
     console.log('carrito', cart)
 
-  return (
-    <CartContext.Provider value={{
-        clear, isInCart, removeItem, addItem
-    }}>
-        {children} {/* Llamo a todos los hijos que envie */}
-    </CartContext.Provider>
-  )
+    return (
+        <CartContext.Provider value={{
+            clear, isInCart, removeItem, addItem, totalPay, totalItems, cart
+        }}>
+            {children} {/* Llamo a todos los hijos que envie */}
+        </CartContext.Provider>
+    )
 }
 
 export default CartProvider

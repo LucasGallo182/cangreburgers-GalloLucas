@@ -302,7 +302,7 @@
 }
 
 .bgCart p {
-    margin: 70px 0px;
+    margin-top: 30px;
     font-size: 26px;
     color: rgb(96, 22, 22);
     font-family: 'Mochiy Pop One', sans-serif;
@@ -311,6 +311,48 @@
 .bgCart img {
     width: 480;
     height: 354;
+}
+
+.bgCart .btnVolverIncio {
+    margin: 30px 0px;
+}
+
+.bgCartTable {
+    padding-top: 30px;
+    min-height: 100vh;
+    background-color: #cda540;
+}
+
+.bgCartTable tr th {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #dbbc6d;
+    color: brown;
+    text-align: center;
+}
+
+.bgCartTable tr td {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.totalPay {
+    margin-top: 10px;
+}
+
+.totalPay span {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffc107;
+    padding: 10px;
+    color: brown;
+}
+
+/* ItemCart */
+.imgTable {
+    width: 64px;
+    height: 64px;
 }
 
 /* MEDIAQUERY */
