@@ -10,7 +10,7 @@ const ItemCart = ({ productos }) => {
             <td><img src={productos.image} alt='{product.title}' className='imgTable' /></td>
             <td>{productos.title}</td>
             <td>{productos.quantity}</td>
-            <td>{productos.precio}</td>
+            <td>${productos.precio}</td>
             <td>${productos.quantity * productos.precio}</td>
             <td><Button variant="warning" onClick={() => removeItem(productos.id)}>Eliminar</Button></td>
         </tr>

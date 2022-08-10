@@ -292,6 +292,10 @@
     color: rgb(96, 22, 22);
 }
 
+.linkNavBar {
+    text-decoration: none;
+}
+
 /* Cart */
 .bgCart {
     background-color: #cda540;

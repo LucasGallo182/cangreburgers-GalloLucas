@@ -4,17 +4,19 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from './CartWidget';
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function NavBar() {
     return (
         <>
             <Navbar expand="lg" className='navBarStyle'>
                 <Container>
-                    <Navbar.Brand href="../" className='d-flex align-items-center'>
-                        <img alt="logo" src='https://i.ibb.co/y8GTw7S/logocb.png' width="60" height="60" />
-                        <span className='spanBranding'>CangreBurgers</span>
-                    </Navbar.Brand>
+                    <Link to='/' className='linkNavBar'>
+                        <Navbar.Brand className='d-flex align-items-center'>
+                            <img alt="logo" src='https://i.ibb.co/y8GTw7S/logocb.png' width="60" height="60" />
+                            <span className='spanBranding'>CangreBurgers</span>
+                        </Navbar.Brand>
+                    </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto pt-2">
