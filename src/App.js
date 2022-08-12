@@ -7,7 +7,8 @@ import Cart from './components/Cart'
 import CartProvider from './context/CartContext'
 
 function App() {
-  const greetingMsj = '¡Elegí tu hamburguesa preferida!';
+  const greetingMsj = '¡Elegí tu hamburguesa preferida!'
+
   return (
     <BrowserRouter>
       <CartProvider>

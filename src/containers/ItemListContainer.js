@@ -1,27 +1,24 @@
 import '../style.css'
 import ItemList from '../components/ItemList'
 import { useState, useEffect } from 'react'
-import Spinner from 'react-bootstrap/Spinner'
 import { useParams } from 'react-router-dom'
-import productos from '../mock/array'
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 export const ItemListContainer = (props) => {
     const [datos, setDatos] = useState([])
-    const [loading, setLoading] = useState(false)
     const { categoryId } = useParams()
 
     useEffect(() => {
-        const getData = new Promise (resolve => {
-            setLoading(true)
-            setTimeout(() => {
-                resolve(productos)
-            }, 3000)
-        })
-        .finally(() => setLoading(false))
+        const db = getFirestore()
+
+        const queryItems = collection(db, 'items')
         if(categoryId){
-            getData.then(res => setDatos (res.filter(prod => prod.category === categoryId)))
+            const queryFilter = query(queryItems, where('category', '==', categoryId))
+            getDocs(queryFilter)
+                .then(res => setDatos(res.docs.map(item => ({id: item.id, ...item.data()}))))
         } else {
-            getData.then(res => setDatos(res))
+            getDocs(queryItems)
+                .then(res => setDatos(res.docs.map(item => ({id: item.id, ...item.data()}))))
         }
     }, [categoryId])
 
@@ -29,7 +26,7 @@ export const ItemListContainer = (props) => {
         <div className='divBody1'>
             <p className="parrafoEjemplo">{props.textoSalida}</p>
             <div className='divBody'>
-                {loading ? <Spinner animation="border" variant="danger" /> : <ItemList datos={datos} />}
+                <ItemList datos={datos} />
             </div>
         </div>
     )
