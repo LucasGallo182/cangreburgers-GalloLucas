@@ -1,10 +1,11 @@
-import { useCartContext } from '../context/CartContext';
+import { useCartContext } from '../context/CartContext'
 import '../style.css'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
-import ItemCart from './ItemCart';
+import ItemCart from './ItemCart'
 import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container'
+import ModalFinalizar from './ModalFinalizar'
 
 function Cart() {
     const { cart, totalPay } = useCartContext()
@@ -12,13 +13,13 @@ function Cart() {
     if (cart.length === 0) {
         return (
             <>
-            <div className='bgCart'>
-                <p>No hay ningun producto agregado el carrito</p>
-                <Link to='../'>
-                    <Button className='btnVolverIncio' variant="warning">Ir a comprar</Button>
-                </Link>
-                <img src='https://i.ibb.co/y6tYyZ0/giphy.gif' alt="cart empty" />
-            </div>
+                <div className='bgCart'>
+                    <p>No hay ningun producto agregado el carrito</p>
+                    <Link to='../'>
+                        <Button className='btnVolverIncio' variant="warning">Ir a comprar</Button>
+                    </Link>
+                    <img src='https://i.ibb.co/y6tYyZ0/giphy.gif' alt="cart empty" />
+                </div>
             </>
         )
     }
@@ -28,7 +29,7 @@ function Cart() {
             <Container>
                 <Table striped bordered hover responsive variant="warning">
                     <thead>
-                        <tr>
+                        <tr className='trUpTable'>
                             <th>Producto</th>
                             <th>Titulo</th>
                             <th>Cantidad</th>
@@ -41,8 +42,9 @@ function Cart() {
                         {cart.map(productos => <ItemCart key={productos.id} productos={productos} />)}
                     </tbody>
                 </Table>
-                <div className='totalPay'>
+                <div className='totalPay d-flex justify-content-between'>
                     <span>Total: ${totalPay()}</span>
+                    <ModalFinalizar />
                 </div>
             </Container>
         </div>

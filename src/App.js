@@ -1,4 +1,5 @@
 import './style.css'
+import './mediaquery.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import NavBar from './components/NavBar'
 import ItemListContainer from './containers/ItemListContainer'

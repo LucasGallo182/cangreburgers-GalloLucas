@@ -1,0 +1,91 @@
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    /* Item */
+    .divBody1 {
+        min-height: 500vh;
+    }
+
+    .cardProducto .card {
+        width: 300px;
+        height: 260px;
+        align-items: center;
+        background-color: #dbbc6d;
+        margin-bottom: 0px;
+    }
+
+    .divBody1 p {
+        font-size: 18px;
+    }
+
+    .cardProducto img {
+        width: 60%;
+    }
+
+    .bgColor .titleProducto {
+        font-size: 18px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .bgColor .subTitleProducto {
+        font-size: 18px;
+        margin: 0px;
+        padding-bottom: 10px;
+    }
+    
+    /* ItemDetail */
+    .cardDescription {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .cardDescription .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        background-color: #cda540;
+    }
+
+    .cardDescription img {
+        width: 80%;
+    }
+
+    .cardDescription .detailTitle span {
+        font-size: 18px;
+    }
+
+    .cardDescription .detailSubTitle {
+        font-size: 15px;
+    }
+
+    .cardDescription .detailDescription {
+        font-size: 15px;
+    }
+
+    /* Cart */
+    .bgCart p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .bgCart img {
+        width: 80%;
+    }
+
+    /* Cart>Table */
+    .trUpTable {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trDownTable {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .totalPay {
+        padding-bottom: 25px;
+    }
+}

@@ -24,6 +24,7 @@ export const ItemDetail = ({ datos }) => {
                     <Card.Text className='detailSubTitle'>{subtitle}</Card.Text>
                     <Card.Text className='detailDescription'>{description}</Card.Text>
                     <Card.Text className='detailPrecio'>${precio}</Card.Text>
+                    <Card.Text>Stock: {stock}</Card.Text>
                     {
                         goCart
                             ? <Link to='../Cart' className='btnTerminarCompra'>

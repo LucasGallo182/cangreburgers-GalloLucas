@@ -37,8 +37,6 @@ const CartProvider = ({ children }) => {
     /* Cant total de productos */
     const totalItems = () => cart.reduce((acc, ActualProd) => acc + ActualProd.quantity, 0)
 
-    console.log('carrito', cart)
-
     return (
         <CartContext.Provider value={{
             clear, isInCart, removeItem, addItem, totalPay, totalItems, cart

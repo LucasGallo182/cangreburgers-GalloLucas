@@ -26,7 +26,7 @@ function NavBar() {
                                 <NavLink className='linkDrop text-danger' to='/categorias/guarnicion' key='guarnicion'>Guarniciones</NavLink>
                             </NavDropdown>
                             <NavLink className='linkMenu text-danger' to='/sucursales' key='Sucursales'>Sucursales</NavLink>
-                            <NavLink className='linkMenu text-danger' to='/sobrenosotros' key='SobreNosotros'>Sobre Nosotros</NavLink>
+                            <NavLink className='linkMenu text-danger' to='/galeria' key='Galeria'>Sobre Nosotros</NavLink>
                             <NavLink className='linkMenu text-danger' to='/contacto' key='Contacto'>Contacto</NavLink>
                         </Nav>
                     </Navbar.Collapse>
