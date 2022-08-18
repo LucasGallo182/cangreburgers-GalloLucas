@@ -115,7 +115,11 @@ const ModalFinalizar = () => {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
+                    {
+                    !(buyerData.name !== '' && buyerData.email !== '' && buyerData.phone !== '' && buyerData.adress !== '') ?
+                    '' :
                     <Button variant='success' onClick={finalizarClick}>Finalizar Compra</Button>
+                    }
                 </Modal.Footer>
             </Modal>
         </>
