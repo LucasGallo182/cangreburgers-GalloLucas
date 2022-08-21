@@ -1,7 +1,29 @@
+/* MEDIAQUERY */
+@media screen and (max-width: 1024px) {
+    .divBody {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px 40px;
+        justify-content: center;
+        background-color: #cda540;
+        align-content: flex-start;
+    }
+
+    .divBody1 {
+        min-height: 360vh;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 879px) {
+    .divBody1 {
+        min-height: 650vh;
+    }
+}
+
 @media screen and (min-width: 0px) and (max-width: 767px) {
     /* Item */
     .divBody1 {
-        min-height: 500vh;
+        min-height: 700vh;
     }
 
     .cardProducto .card {

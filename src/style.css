@@ -19,7 +19,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 
 .cardProducto {
-    height: 325px;
+    height: 400px;
 }
 
 .titleProducto {
@@ -213,6 +213,132 @@
     text-decoration: none;
 }
 
+/* Error */
+
+.error404 {
+    background-color: #cda540;
+    min-height: 91vh;
+}
+
+.colError {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(98, 13, 13);
+    padding: 20px 0px;
+    border-radius: 25px;
+    color: white;
+}
+
+/* Contacto */
+.contactForm {
+    background-color: #cda540;
+    min-height: 91vh;
+}
+
+.colContacto {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(98, 13, 13);
+    padding: 20px 0px;
+    border-radius: 25px;
+    color: white;
+}
+
+.colContacto input {
+    width: 28vw;
+}
+
+/* Busqueda */
+.divSearch {
+    background-color: #cda540;
+    min-height: 91vh;
+    padding: 50px;
+}
+
+.colSearch {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(98, 13, 13);
+    padding: 20px 0px;
+    border-radius: 25px;
+    color: white;
+}
+
+.colSearch form input {
+    width: 38vw;
+}
+
+.colSearch form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.listSearch {
+    list-style: none;
+}
+
+.theadSearch {
+    background-color: brown;
+    color: white;
+}
+
+/* Galeria */
+.galery {
+    background-color: #cda540;
+}
+
+.galeriaH1 {
+    background-color: #cda540;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.galeriaDiv {
+    background-color: #cda540;
+    min-height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+    gap: 15px;
+}
+
+.cardGalery .card {
+    background-color: #cda540;
+    border: none;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.zoomImg {
+    width: 32px;
+    position: relative;
+    top: 64px;
+    border-radius: 5px;
+    padding: 2px;
+    opacity: 0.8;
+    background-color: brown;
+}
+
+.bgTransparent {
+    background-color: #cda540;
+}
+
+.modal-body .imgModal {
+    width: 800px;
+}
+
 /* ItemListContainer */
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 
@@ -227,6 +353,7 @@
 .divBody1 {
     background-color: #cda540;
     text-align: center;
+    min-height: 200vh;
 }
 
 .divBody {
@@ -359,6 +486,40 @@
     height: 64px;
 }
 
+/* Combo */
+.divCombo {
+    background-color: #cda540;
+    min-height: 91vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    align-items: center;
+}
+
+.comboBoxes {
+    display: flex;
+    gap: 50px;
+    padding-top: 100px;
+}
+
+.comboBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#e3c773;
+    border-radius: 20px;
+}
+
+.comboBox img {
+    border-radius: 20px;
+    transition: transform 1s;
+}
+
+.comboBox img:hover {
+    transform: scale(1.1);
+}
+
 /* MEDIAQUERY */
 @media screen and (max-width: 1024px) {
     .divBody {
@@ -371,6 +532,6 @@
     }
 
     .divBody1 {
-        min-height: 300vh;
+        min-height: 360vh;
     }
 }

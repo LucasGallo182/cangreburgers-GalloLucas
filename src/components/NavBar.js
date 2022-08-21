@@ -23,10 +23,11 @@ function NavBar() {
                             <NavDropdown title={<span className='linkMenu text-danger'>Categorías</span>} id="basic-nav-dropdown" className='catLink'>
                                 <NavLink className='linkDrop text-danger' to='/categorias/hamburguesas' key='hamburguesas'>Hamburguesas</NavLink>
                                 <NavLink className='linkDrop text-danger' to='/categorias/pollo' key='pollo'>Pollo</NavLink>
+                                <NavLink className='linkDrop text-danger' to='/categorias/vegetal' key='veggie'>Veggie</NavLink>
                                 <NavLink className='linkDrop text-danger' to='/categorias/guarnicion' key='guarnicion'>Guarniciones</NavLink>
                             </NavDropdown>
-                            <NavLink className='linkMenu text-danger' to='/sucursales' key='Sucursales'>Sucursales</NavLink>
-                            <NavLink className='linkMenu text-danger' to='/galeria' key='Galeria'>Sobre Nosotros</NavLink>
+                            <NavLink className='linkMenu text-danger' to='/busqueda' key='busqueda'>Buscá tu pedido</NavLink>
+                            <NavLink className='linkMenu text-danger' to='/galeria' key='Galeria'>Galeria</NavLink>
                             <NavLink className='linkMenu text-danger' to='/contacto' key='Contacto'>Contacto</NavLink>
                         </Nav>
                     </Navbar.Collapse>

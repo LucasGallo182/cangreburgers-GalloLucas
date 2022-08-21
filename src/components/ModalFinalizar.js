@@ -32,6 +32,9 @@ const ModalFinalizar = () => {
             [event.target.name] : event.target.value
         })
     }
+
+    /* RepE-mail */
+    const [repEmail, setRepEmail] = useState('')
     
     /* Navigate */
     const navigate = useNavigate()
@@ -50,10 +53,13 @@ const ModalFinalizar = () => {
         const ordersCollection = collection(db, 'orders')
         addDoc(ordersCollection, order)
             .then(({ id }) => setShowMeId(id))
-        setTimeout(() => {
-            clear()
-            navigate('../')
-        }, 6000);
+
+    }
+
+    /* Fn Aceptar Orden */
+    const endOrder = () => {
+        clear()
+        navigate('../')
     }
 
     /* BS Modal */
@@ -72,6 +78,7 @@ const ModalFinalizar = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
+                        { buyerData.email !== '' && buyerData.email === repEmail ? <Alert variant="success">Los campos e-mail coinciden</Alert> : <Alert variant="danger">Los campos e-mail no coinciden</Alert> }
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Nombre</Form.Label>
                             <Form.Control
@@ -90,6 +97,14 @@ const ModalFinalizar = () => {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Repite email</Form.Label>
+                            <Form.Control
+                                type="email"
+                                value={repEmail}
+                                onChange={(e) => setRepEmail(e.target.value)}
+                            />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Telefono</Form.Label>
                             <Form.Control
                                 type="tel"
@@ -105,21 +120,26 @@ const ModalFinalizar = () => {
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
-                        {
-                            ShowMeId === ''
-                                ? ''
-                                : <Alert variant="success">
-                                    <p className='mb-0'>Pedido generado exitosamente, su número de orden es el: <strong>{ShowMeId}</strong></p>
-                                </Alert>
-                        }
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    {
-                    !(buyerData.name !== '' && buyerData.email !== '' && buyerData.phone !== '' && buyerData.adress !== '') ?
-                    '' :
-                    <Button variant='success' onClick={finalizarClick}>Finalizar Compra</Button>
-                    }
+                        {
+                            ShowMeId === ''
+                                ? !(buyerData.name !== '' && buyerData.email !== '' && buyerData.phone !== '' && buyerData.adress !== '') ?
+                                '' :
+                                <Button variant='success' onClick={finalizarClick}>Finalizar Compra</Button>
+                                : <>
+                                <Alert variant="dark">
+                                    <Alert variant="success">
+                                    <p className='mb-0'>Pedido generado exitosamente, su número de orden es el: <strong>{ShowMeId}</strong></p>
+                                    </Alert>
+                                    <Alert variant="warning">
+                                    <p className='mb-0'>Recuerda guardarlo para poder buscar tu pedido.</p>
+                                    </Alert>
+                                </Alert>
+                                <Button variant='warning' onClick={endOrder}>Volver al Inicio</Button>
+                                </>
+                        }
                 </Modal.Footer>
             </Modal>
         </>

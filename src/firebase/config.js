@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyD5dFjEV2Mw7JQWAUH_FfjmHfCQiXgULyI",
-    authDomain: "cangreburgers-ecommerce.firebaseapp.com",
-    projectId: "cangreburgers-ecommerce",
-    storageBucket: "cangreburgers-ecommerce.appspot.com",
-    messagingSenderId: "957941215018",
-    appId: "1:957941215018:web:67dc01098a2c1f8d62f853"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDERID,
+    appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
